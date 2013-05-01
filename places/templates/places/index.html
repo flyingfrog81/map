@@ -1,0 +1,9 @@
+{% if latest_place_list %}
+    <ul>
+    {% for place in latest_place_list %}
+        <li><a href="{% url 'detail' place.id %}">{{ place.description }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No places are available.</p>
+{% endif %}
